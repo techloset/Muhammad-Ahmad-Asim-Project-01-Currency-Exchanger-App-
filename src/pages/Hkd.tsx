@@ -3,9 +3,20 @@ import React from 'react';
 import Select from 'react-select';
 
 
-export default function CurrencyCard() {
+
+export default function Hkd() {
   return (
-    <div className="rounded-md relative bg-white shadow-2xl p-4 w-2/3 mx-auto">
+    <div>
+
+        <div className="bg-blue-100 h-[300px]">
+
+        
+                <h1 className="text-center font-roboto text-gray-900 text-6xl font-bold leading-100 mt-20 ">Convert USD to HKD</h1>
+            <div className="relative mt-[120px]">
+           
+
+
+            <div className="rounded-md relative bg-white shadow-2xl p-4 w-2/3 mx-auto">
       <h1 className="text-center font-roboto text-3xl font-bold leading-7 text-gray-800 mt-6 mb-8">
         Make fast and affordable <br /> international business payments
       </h1>
@@ -35,6 +46,8 @@ export default function CurrencyCard() {
                 { value: 'NZD', label: 'NZD' },
               ]}
               className="currency-select h-17  w-24"
+              placeholder="USD"
+             
               menuPosition="fixed" // Set menu position to fixed
             />
           </div>
@@ -60,6 +73,8 @@ export default function CurrencyCard() {
                 { value: 'NZD', label: 'NZD' },
               ]}
               className="currency-select h-17 w-24"
+              
+              placeholder="HKD"
               menuPosition="fixed" // Set menu position to fixed
             />
           </div>
@@ -71,7 +86,12 @@ export default function CurrencyCard() {
           Get started</button>
       </div>
     </div>
-  );
+
+
+
+            </div>
+        </div>
+      
+    </div>
+  )
 }
-
-

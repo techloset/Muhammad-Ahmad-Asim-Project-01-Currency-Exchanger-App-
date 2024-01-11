@@ -2,19 +2,23 @@
 import CurrencyCard from "../../components/currencyCard";
 import Select from 'react-select';
 
+
 export default function Home() {
   return (
-    <div>
-      <div className="first" >
-        <h1 className="text-center font-roboto text-6xl font-bold leading-16 text-gray-800">Currency Converter</h1>
+    <div><div>
+      <div className="bg-blue-100 h-[470px]">
+
+
+        <h1 className="text-center font-roboto text-gray-900 text-6xl font-bold leading-100 mt-20 ">Currency Converter</h1>
         <p className="text-center mt-5 font-roboto text-base font-normal leading-7 text-gray-700">
-          Need to make an international business payment? Take a look at our live foreign exchange rates.</p>
-        <div className="mt-14  ">
+          Need to make an international business payment? Take a look at our live foreign exchange rates.
+        </p>
+        <div className="relative mt-[20px]">
           <CurrencyCard />
         </div>
       </div>
-
-      <div className="my-48 text-center justify-center ">
+    </div>
+      <div className="my-48 text-center justify-center mt-[600px] ">
         <h1 className="text-gray-900 font-roboto text-4xl font-bold leading-10">Let’s save you some time</h1>
         <p className="mt-6">If you’ve got a target exchange rate in mind but haven’t got time to keep tabs <br /> on market movement, then a firm order could be perfect for you. When your <br /> chosen rate is reached, we’ll act immediately, leaving you free to concentrate <br /> on your business.</p>
         <a href="/IndividualCurrency"> <button className="rounded-sm mt-4 bg-red-500 h-10 text-white p-4" >Find out more</button></a>

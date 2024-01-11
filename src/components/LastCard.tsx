@@ -3,7 +3,7 @@ import React from 'react';
 import Select from 'react-select';
 
 
-export default function CurrencyCard() {
+export default function LastCard() {
   return (
     <div className="rounded-md relative bg-white shadow-2xl p-4 w-2/3 mx-auto">
       <h1 className="text-center font-roboto text-3xl font-bold leading-7 text-gray-800 mt-6 mb-8">
@@ -35,6 +35,8 @@ export default function CurrencyCard() {
                 { value: 'NZD', label: 'NZD' },
               ]}
               className="currency-select h-17  w-24"
+              placeholder="USD"
+             
               menuPosition="fixed" // Set menu position to fixed
             />
           </div>
@@ -60,6 +62,8 @@ export default function CurrencyCard() {
                 { value: 'NZD', label: 'NZD' },
               ]}
               className="currency-select h-17 w-24"
+              
+              placeholder="CAD"
               menuPosition="fixed" // Set menu position to fixed
             />
           </div>
@@ -73,5 +77,3 @@ export default function CurrencyCard() {
     </div>
   );
 }
-
-
