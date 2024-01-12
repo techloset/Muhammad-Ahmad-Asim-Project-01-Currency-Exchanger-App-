@@ -48,7 +48,8 @@ export const Todo = () => {
       {exchangeRatesData.isLoading ? (
         <p>Loading exchange rates...</p>
       ) : (
-        <p>Exchange rates data: {JSON.stringify(exchangeRatesData.rates)}</p>
+        
+        <h1>Exchange rates data: {JSON.stringify(exchangeRatesData.rates)}</h1>
       )}
     </div>
   );
