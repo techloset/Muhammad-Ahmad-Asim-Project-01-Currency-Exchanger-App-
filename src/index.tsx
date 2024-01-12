@@ -1,4 +1,6 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -24,57 +26,57 @@ import Gpp from './pages/Gpp';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>
+    element: <App />
   },
   {
     path: "/IndividualCurrency",
-    element: <IndividualCurrency/>
+    element: <IndividualCurrency />
   },
   {
     path: "/CurrencyPairs",
-    element: <CurrencyPairs/>
+    element: <CurrencyPairs />
   },
   {
     path: "/Cad",
-    element: <Cad/>
+    element: <Cad />
   },
   {
     path: "/Aud",
-    element: <Aud/>
+    element: <Aud />
   },
   {
     path: "/Cnh",
-    element: <Cnh/>
+    element: <Cnh />
   },
   {
     path: "/Eur",
-    element: <Eur/>
+    element: <Eur />
   },
-   
+
 
   {
     path: "/Sgd",
-    element: <Sgd/>
+    element: <Sgd />
   },
   {
     path: "/Nzd",
-    element: <Nzd/>
+    element: <Nzd />
   },
   {
     path: "/Jpy",
-    element: <Jpy/>
+    element: <Jpy />
   },
   {
     path: "/Hkd",
-    element: <Hkd/>
+    element: <Hkd />
   },
   {
     path: "/Gbp",
-    element: <Gbp/>
+    element: <Gbp />
   },
   {
     path: "/Gpp",
-    element: <Gpp/>
+    element: <Gpp />
   },
 ]);
 
@@ -85,7 +87,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-   <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 

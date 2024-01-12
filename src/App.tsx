@@ -1,13 +1,16 @@
 
 import './App.css';
-import Home from './pages/Home/page';
+import { Todo } from './Todo';
+
+// import Home from './pages/Home/page';
 
 
 
 function App() {
   return (
     <div className='body'>
-      <Home/>
+      {/* <Home/> */}
+     <Todo/>
     </div>
   );
 }

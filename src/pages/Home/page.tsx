@@ -37,11 +37,8 @@ export default function Home() {
               { value: 'CAD', label: 'CAD' },
               { value: 'AUD', label: 'AUD' },
               { value: 'EUR', label: 'EUR' },
-              { value: 'GBP', label: 'GBP' },
               { value: 'CNH', label: 'CNH' },
               { value: 'JPY', label: 'JPY' },
-              { value: 'HKD', label: 'HKD' },
-              { value: 'SGD', label: 'SGD' },
               { value: 'NZD', label: 'NZD' },
             ]}
             className="currency-select h-2 mb-10 w-1/2"
