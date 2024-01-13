@@ -14,8 +14,8 @@ interface CurrencyState {
 const initialState: CurrencyState = {
   rates: {},
   baseCurrency: 'USD',
-  targetCurrency: 'EUR',
-  amount: 1,
+  targetCurrency: 'PKR',
+  amount: 0,
   loading: 'idle',
   error: null,
 };
