@@ -1,4 +1,4 @@
-import CurrencyCard from "../components/currencyCard";
+import CurrencyCard from '../components/currencyCard'
 
 
 export default function CurrencyPairs() {
@@ -10,7 +10,7 @@ export default function CurrencyPairs() {
         
                 <h1 className="text-center font-roboto text-gray-900 text-6xl font-bold leading-100 mt-20 ">Convert USD to any Currency</h1>
             <div className="relative mt-[120px]">
-            <CurrencyCard/>
+              <CurrencyCard/>
             </div>
         </div>
       
