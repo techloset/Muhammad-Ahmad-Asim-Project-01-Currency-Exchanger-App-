@@ -9,75 +9,21 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import IndividualCurrency from './pages/IndividualCurrency';
-import CurrencyPairs from './pages/CurrencyPairs';
-import Cad from './pages/Cad';
 import Aud from './pages/Home/Aud';
-import Cnh from './pages/Cnh';
-import Eur from './pages/Eur';
-import Sgd from './pages/Sgd';
-import Nzd from './pages/Nzd';
-import Jpy from './pages/Jpy';
-import Hkd from './pages/Hkd';
-import Gbp from './pages/Gbp';
-import Gpp from './pages/Gpp';
 import store from './app/store';
 
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />
-  },
+  { path: "/", element: <App /> },
   {
     path: "/IndividualCurrency",
     element: <IndividualCurrency />
   },
   {
-    path: "/CurrencyPairs",
-    element: <CurrencyPairs />
-  },
-  {
-    path: "/Cad",
-    element: <Cad />
-  },
-  {
     path: "/Aud",
     element: <Aud />
   },
-  {
-    path: "/Cnh",
-    element: <Cnh />
-  },
-  {
-    path: "/Eur",
-    element: <Eur />
-  },
 
-
-  {
-    path: "/Sgd",
-    element: <Sgd />
-  },
-  {
-    path: "/Nzd",
-    element: <Nzd />
-  },
-  {
-    path: "/Jpy",
-    element: <Jpy />
-  },
-  {
-    path: "/Hkd",
-    element: <Hkd />
-  },
-  {
-    path: "/Gbp",
-    element: <Gbp />
-  },
-  {
-    path: "/Gpp",
-    element: <Gpp />
-  },
 ]);
 
 
@@ -87,9 +33,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <Provider store={store}>
-  <React.StrictMode>
+    <React.StrictMode>
       <RouterProvider router={router} />
-  </React.StrictMode>
+    </React.StrictMode>
   </Provider>
 );
 
