@@ -11,6 +11,8 @@ interface CurrencyState {
   error: string | null;
 }
 
+
+
 const initialState: CurrencyState = {
   rates: {},
   baseCurrency: 'USD',
