@@ -1,5 +1,4 @@
 
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -10,12 +9,12 @@ import {
   fetchExchangeRates,
 } from '../features/CurrencySlice';
 
-const apiUrl = 'http://api.exchangeratesapi.io/v1/symbols?access_key=4c9fea4e264cd6f8266a884feb4b839b';
 
 interface CurrencyOption {
   value: string;
   label: string;
 }
+
 
 function calculateConvertedAmount(amount: number, sourceCurrency: string, targetCurrency: string, exchangeRates: Record<string, number>): number {
   const eurAmount = amount / exchangeRates[sourceCurrency];
@@ -23,28 +22,13 @@ function calculateConvertedAmount(amount: number, sourceCurrency: string, target
   return targetAmount;
 }
 
+
+
 function App() {
   const dispatch = useDispatch();
   const { rates, baseCurrency, targetCurrency, amount, loading, error } = useSelector(selectCurrency);
   const [convertedAmount, setConvertedAmount] = useState<number | null>(null);
   const [popupVisible, setPopupVisible] = useState(false);
-
-  const [countryNames, setCountryNames] = useState<string[]>([]);
-  const [countryCurrencies, setCountryCurrencies] = useState<string[]>([]);
-
-  useEffect(() => {
-    axios.get(apiUrl)
-      .then(response => response.data)
-      .then(data => {
-        const symbols = data.symbols;
-        const names = Object.values(symbols) as string[];
-        const currencies = Object.keys(symbols) as string[];
-
-        setCountryNames(names);
-        setCountryCurrencies(currencies);
-      })
-      .catch(error => console.error('Error fetching country names:', error));
-  }, []);
 
   useEffect(() => {
     dispatch(fetchExchangeRates(baseCurrency) as any);
@@ -69,24 +53,26 @@ function App() {
 
     const convertedAmount = calculateConvertedAmount(amount, baseCurrency, targetCurrency, rates);
 
+
     setConvertedAmount(convertedAmount);
 
-    setPopupVisible(false); // Set to true to display the conversion popup
+    setPopupVisible(false);
   };
 
   const swapCurrencies = () => {
+
     dispatch(setBaseCurrency(targetCurrency));
     dispatch(setTargetCurrency(baseCurrency));
   };
 
   const mapRatesToOptions = (): CurrencyOption[] => {
-    return countryNames.map((countryName, index) => ({
-      value: countryCurrencies[index],
-      label: `${countryName} - ${countryCurrencies[index]} (${countryName})`,
+    return Object.entries(rates).map(([currency, rate]) => ({
+      value: currency,
+      label: `${currency}`,
     }));
   };
   return (
-    <div className="rounded-md relative bg-white w-3/4 shadow-2xl p-4  mx-auto">
+    <div className="rounded-md relative bg-white shadow-2xl p-4 w-2/3 mx-auto">
       <h1 className="text-center font-roboto text-3xl font-bold leading-7 text-gray-800 mt-6 mb-8">
         Make fast and affordable <br /> international business payments
       </h1>
@@ -107,7 +93,7 @@ function App() {
               />
             </div>
             {loading === 'succeeded' && (
-              <div className="w-1/4">
+              <div className="w-1/4 ">
                 <select
                   id="baseCurrency"
                   name="baseCurrency"
@@ -117,7 +103,7 @@ function App() {
                 >
                   {mapRatesToOptions().map((option) => (
                     <option key={option.value} value={option.value}>
-                      {option.value}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;{option.label}
+                      {option.label}
                     </option>
                   ))}
                 </select>
@@ -148,12 +134,12 @@ function App() {
                   id="targetCurrency"
                   name="targetCurrency"
                   value={targetCurrency}
-                  className="currency-select border-r-white  border-b-2 mt-[-16px] border-l-2 h-[78px] border-black h-17 w-full"
+                  className="currency-select border-l-2 border-b-2 mt-[-16px] border-black h-[78px] w-full"
                   onChange={handleTargetCurrencyChange}
                 >
                   {mapRatesToOptions().map((option) => (
                     <option key={option.value} value={option.value}>
-                      {option.value}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;{option.label}
+                      {option.label}
                     </option>
                   ))}
                 </select>

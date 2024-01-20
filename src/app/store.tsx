@@ -1,11 +1,13 @@
 // src/app/store.ts
 import { configureStore } from '@reduxjs/toolkit';
-import currencyReducer from '../features/currencySlice';
+import currencyReducer from '../features/CurrencySlice';
 
 const store = configureStore({
   reducer: {
     currency: currencyReducer,
+    
   },
+  
 });
 
 export type RootState = ReturnType<typeof store.getState>;

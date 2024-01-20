@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import CurrencyCard from '../../components/currencyCard';
+import CurrencyCard from '../../components/CurrencyCard';
 
 export default function Home() {
   const [selectedCurrency, setSelectedCurrency] = useState('');
@@ -24,7 +24,7 @@ export default function Home() {
         <p className="text-center mt-5 font-roboto text-base font-normal leading-7 text-gray-700">
           Need to make an international business payment? Take a look at our live foreign exchange rates.
         </p>
-        <div className="relative mt-[20px]">
+        <div className="relative mt-[20px] ">
           <CurrencyCard />
         </div>
       </div>
@@ -36,14 +36,14 @@ export default function Home() {
           firm order could be perfect for you. When your <br /> chosen rate is reached, we’ll act immediately, leaving
           you free to concentrate <br /> on your business.
         </p>
-        <button className="rounded-sm mt-4 bg-red-500 h-14 text-white p-4">Find out more</button>
+        <button className="rounded-sm border-2 border-red-500 hover:bg-white hover:text-red-500 mt-4 bg-red-500 h-14 text-white p-4">Find out more</button>
       </div>
 
       <div className="bg-blue-100 h-48 ">
         <h1 className="text-center text-gray-900 font-roboto text-4xl font-bold leading-10">Popular currencies</h1>
         <div className="flex justify-center items-center mb-12 mt-16">
           <select
-            className='w-10/12 sm:w-4/12 h-10 rounded-lg mt-3 p-1 border-2 text-gray-400 focus:outline-none'
+            className='w-10/12 sm:w-4/12 h-10 rounded-sm mt-3 p-1 border-2 text-gray-400 focus:outline-none'
             onChange={(e) => setSelectedCurrency(e.target.value)}
           >
             <option value=""> Select Currency </option>
@@ -56,7 +56,7 @@ export default function Home() {
           </select>
           <button
             onClick={handleDropDown}
-            className='border-2 mt-3 w-4/12 sm:w-2/12 rounded-md border-red-500 mx-4 px-8 ph-1 bg-red-500 text-white font-bold hover:bg-white hover:text-red-500'
+            className='border-2 mt-3 w-4/12 sm:w-2/12 rounded-sm border-red-500 mx-4 px-8 ph-1 bg-red-500 text-white font-bold hover:bg-white hover:text-red-500'
           >
             Go
           </button>
