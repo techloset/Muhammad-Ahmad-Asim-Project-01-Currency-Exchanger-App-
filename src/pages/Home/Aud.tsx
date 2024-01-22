@@ -2,7 +2,7 @@
 import CurrencyCard from '../../components/CurrencyCard'
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-export default function Aud() {
+ function Aud() {
   const location = useLocation();
   console.log('Location:', location);
 
@@ -20,3 +20,4 @@ export default function Aud() {
     </div>
   );
 }
+export default Aud ;
