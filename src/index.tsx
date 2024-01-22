@@ -9,7 +9,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import IndividualCurrency from './pages/IndividualCurrency';
-
 import Store from './app/Store';
 import Last from './pages/home/Last';
 
