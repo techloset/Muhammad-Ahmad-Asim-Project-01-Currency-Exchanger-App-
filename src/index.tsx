@@ -9,8 +9,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import IndividualCurrency from './pages/IndividualCurrency';
-import Aud from './pages/home/Aud';
+
 import Store from './app/Store';
+import Aud from './pages/home/Aud';
 
 
 const router = createBrowserRouter([
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Aud",
-    element: <Aud />
+    element: <Aud/>
   },
 
 ]);
