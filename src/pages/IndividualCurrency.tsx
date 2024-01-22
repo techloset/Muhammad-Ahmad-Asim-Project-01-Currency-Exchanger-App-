@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import img from '../assets/Vector.png';
-import Card from '../components/Card'; // Use uppercase 'C'
+import Card from '../components/Card'; 
 export default function IndividualCurrency() {
   const location = useLocation();
   const currency = new URLSearchParams(location.search).get('currency');

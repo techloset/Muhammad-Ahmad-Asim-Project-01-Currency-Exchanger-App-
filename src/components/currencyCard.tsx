@@ -71,7 +71,7 @@ function App() {
 
     setConvertedAmount(convertedAmount);
 
-    setPopupVisible(false); // Set to true to display the conversion popup
+    setPopupVisible(false);
   };
 
   const swapCurrencies = () => {
@@ -193,7 +193,7 @@ function App() {
           </div>
         )}
         <button onClick={convertCurrency} className="w-1/2 h-10 mt-3 border-2 border-red-500 hover:bg-white hover:text-red-500 flex-shrink-0 rounded-sm bg-red-500 text-white font-roboto text-base leading-46 cursor-pointer">
-          Convert
+          Get started
         </button>
       </div>
     </div>
