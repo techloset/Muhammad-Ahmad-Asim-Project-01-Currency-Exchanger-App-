@@ -11,7 +11,8 @@ import {
 import IndividualCurrency from './pages/IndividualCurrency';
 
 import Store from './app/Store';
-import Aud from './pages/home/Aud';
+import Last from './pages/home/Last';
+
 
 
 const router = createBrowserRouter([
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Aud",
-    element: <Aud/>
+    element: <Last/>
   },
 
 ]);

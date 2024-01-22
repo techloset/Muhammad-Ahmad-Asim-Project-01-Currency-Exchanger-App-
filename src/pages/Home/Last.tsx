@@ -1,14 +1,14 @@
-
 import CurrencyCard from '../../components/CurrencyCard'
 import React from 'react';
 import { useLocation } from 'react-router-dom';
- function Aud() {
-  const location = useLocation();
-  console.log('Location:', location);
 
-  const fromCurrency = new URLSearchParams(location.search).get('fromCurrency');
-  const toCurrency = new URLSearchParams(location.search).get('toCurrency');
-
+export default function Last() {
+    const location = useLocation();
+    console.log('Location:', location);
+  
+    const fromCurrency = new URLSearchParams(location.search).get('fromCurrency');
+    const toCurrency = new URLSearchParams(location.search).get('toCurrency');
+  
   return (
     <div className="bg-blue-100 h-[470px]">
       <h1 className="text-center font-roboto text-gray-900 text-6xl font-bold leading-100 mt-20">
@@ -18,6 +18,5 @@ import { useLocation } from 'react-router-dom';
         <CurrencyCard/>
       </div>
     </div>
-  );
+  )
 }
-export default Aud ;
