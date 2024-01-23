@@ -1,22 +1,17 @@
-
-
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import CurrencyCard from '../../components/CurrencyCard';
-
+import CurrencyCard from '.././components/CurrencyCard';
 export default function Home() {
-  const [selectedCurrency, setSelectedCurrency] = useState('');
-  const navigate = useNavigate();
-
-  const handleDropDown = () => {
-    if (!selectedCurrency) {
-      alert('Please select a currency');
-    } else {
-      navigate(`/IndividualCurrency?currency=${selectedCurrency}`);
-    }
-  };
-
+    const [selectedCurrency, setSelectedCurrency] = useState('');
+    const navigate = useNavigate();
+  
+    const handleDropDown = () => {
+      if (!selectedCurrency) {
+        alert('Please select a currency');
+      } else {
+        navigate(`/IndividualCurrency?currency=${selectedCurrency}`);
+      }
+    };
   return (
     <div>
       <div className="bg-blue-100 h-[470px]">
@@ -63,5 +58,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,6 +1,7 @@
 
 import './App.css';
-import Home from './pages/home/page'
+import Home from './pages/Home';
+
 
 
 
@@ -9,7 +10,7 @@ function App() {
 
     <div className='body'>
      
-      <Home/>
+     <Home/>
      
     </div>
   );
