@@ -9,8 +9,9 @@ import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import IndividualCurrency from './pages/IndividualCurrency';
 
-import Last from './pages/home/Last';
+
 import store from './app/store'
+import Final from './pages/Final';
 
 const router = createBrowserRouter([
   { path: '/', element: <App /> },
@@ -19,8 +20,8 @@ const router = createBrowserRouter([
     element: <IndividualCurrency />
   },
   {
-    path: '/Aud',
-    element: <Last />
+    path: '/Final',
+    element: <Final/>
   },
 ]);
 

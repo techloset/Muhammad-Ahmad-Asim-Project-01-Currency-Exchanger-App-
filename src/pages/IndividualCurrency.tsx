@@ -23,14 +23,14 @@ export default function IndividualCurrency() {
       <h1 className='text-gray-900 mt-[100px] text-center font-roboto text-3xl font-bold leading-42'>Exchange {currency} without hidden fees</h1>
       <p className='text-gray-900 mt-[30px] text-center font-roboto text-base font-normal leading-24'>Wherever you need to send {currency}, our pricing is clear and simple. Our model is made up <br /> of two parts: an FX rate and a small payment fee – that’s it. So what you see at the time of <br /> your transaction is exactly what you’ll pay – there are no hidden charges.</p>
       <div className="flex flex-col sm:flex-row justify-center mb-[10px]">
-        <Link to={`/Aud?currency=USD&fromCurrency=${currency}&toCurrency=EUR`}><Card description='EUR' /></Link>
-        <Link to={`/Aud?currency=USD&fromCurrency=${currency}&toCurrency=JPY`}><Card description='JPY' /></Link>
-        <Link to={`/Aud?currency=USD&fromCurrency=${currency}&toCurrency=USD`}><Card description='USD' /></Link>
-        <Link to={`/Aud?currency=USD&fromCurrency=${currency}&toCurrency=CAD`}><Card description='CAD' /></Link>
+        <Link to={`/Final?currency=USD&fromCurrency=${currency}&toCurrency=EUR`}><Card description='EUR' /></Link>
+        <Link to={`/Final?currency=USD&fromCurrency=${currency}&toCurrency=JPY`}><Card description='JPY' /></Link>
+        <Link to={`/Final?currency=USD&fromCurrency=${currency}&toCurrency=USD`}><Card description='USD' /></Link>
+        <Link to={`/Final?currency=USD&fromCurrency=${currency}&toCurrency=CAD`}><Card description='CAD' /></Link>
       </div>
       <div className="flex flex-col sm:flex-row justify-center mb-[10px]">
-        <Link to={`/Aud?currency=USD&fromCurrency=${currency}&toCurrency=PKR`}><Card description='PKR' /></Link>
-        <Link to={`/Aud?currency=USD&fromCurrency=${currency}&toCurrency=NZD`}><Card description='NZD' /></Link>
+        <Link to={`/Final?currency=USD&fromCurrency=${currency}&toCurrency=PKR`}><Card description='PKR' /></Link>
+        <Link to={`/Final?currency=USD&fromCurrency=${currency}&toCurrency=NZD`}><Card description='NZD' /></Link>
       </div>
     </div>
   );
