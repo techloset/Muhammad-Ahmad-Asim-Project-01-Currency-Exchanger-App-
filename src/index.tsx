@@ -8,8 +8,9 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import IndividualCurrency from './pages/IndividualCurrency';
-import Store from './App/Store';
+
 import Last from './pages/home/Last';
+import store from './app/store'
 
 const router = createBrowserRouter([
   { path: '/', element: <App /> },
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.render(
-  <Provider store={Store}>
+  <Provider store={store}>
     <React.StrictMode>
       <RouterProvider router={router} />
     </React.StrictMode>

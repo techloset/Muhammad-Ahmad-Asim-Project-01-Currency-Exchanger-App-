@@ -2,7 +2,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import currencyReducer from '../features/CurrencySlice';
 
-const Store = configureStore({
+const store = configureStore({
   reducer: {
     currency: currencyReducer,
     
@@ -10,7 +10,7 @@ const Store = configureStore({
   
 });
 
-export type RootState = ReturnType<typeof Store.getState>;
-export type AppDispatch = typeof Store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 
-export default Store;
+export default store;
