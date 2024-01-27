@@ -10,7 +10,7 @@ import {
   fetchExchangeRates,
 } from '../features/currencySlice';
 
-const apiUrl = 'https://route-handler-bootcamp.vercel.app/api/http://api.exchangeratesapi.io/v1/symbols?access_key=4c9fea4e264cd6f8266a884feb4b839b';
+const apiUrl = 'http://api.exchangeratesapi.io/v1/symbols?access_key=4c9fea4e264cd6f8266a884feb4b839b';
 
 interface CurrencyOption {
   value: string;

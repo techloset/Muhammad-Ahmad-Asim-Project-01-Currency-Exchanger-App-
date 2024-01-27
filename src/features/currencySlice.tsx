@@ -14,7 +14,7 @@ export const fetchExchangeRates = createAsyncThunk(
   'currency/fetchExchangeRates',
   async (baseCurrency: string) => {
     try {
-      const response = await axios.get(` http:/api.exchangeratesapi.io/v1/latest?access_key=4c9fea4e264cd6f8266a884feb4b839b`);
+      const response = await axios.get(`  https://route-handler-bootcamp.vercel.app/api/http:/api.exchangeratesapi.io/v1/latest?access_key=4c9fea4e264cd6f8266a884feb4b839b`);
       const responseData = response.data.rates;
       // console.log(response);
 
